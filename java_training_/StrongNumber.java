@@ -2,12 +2,6 @@ package java_training_;
 
 import java.util.Scanner;
 
-//Strong Number
-//145-->1 , 4, 5
-//1!+4!+5!
-//1+24+125
-//145
-
 
 public class StrongNumber {
 	
@@ -34,7 +28,9 @@ public class StrongNumber {
 			int ld=n%10;//5
 			sum=sum+fact(ld);
 			n=n/10;
-		}
+		} 
+		
+		
 		if (temp==sum)
 		{
 			System.out.println("strong number");

@@ -12,11 +12,11 @@ public class AlternateCharacter {
 		int start=0, end= s.length()-1;
 		while(start<end&&s.charAt(start)==' ')
 		{
-			start++;
+			start--;
 		}
 		while(end>=start && s.charAt(end)==' ')
 		{
-			end--;
+			end++;
 		}
 		for(int i=start;i<=end;i++)
 		{
@@ -24,5 +24,5 @@ public class AlternateCharacter {
 		}
 		System.out.println(res);
 	}
-
+//need to be done
 }
