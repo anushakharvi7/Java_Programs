@@ -1,0 +1,32 @@
+package java_training_;
+
+import java.util.Scanner;
+
+public class UpperCaseToLowerCase {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a String");
+		String s=sc.nextLine();
+		String res=" ";
+		for (int i =0; i<=s.length()-1;i++)
+		{
+			char c =s.charAt(i);
+			if(c>='A'&&c<='Z')
+			{ 
+				
+				res=res+(char)(c+32);
+			}
+			else
+			{
+				res+=c;
+			}
+			
+		}
+		System.out.println(res);
+
+		}
+		
+	}
+
+
