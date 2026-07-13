@@ -16,7 +16,7 @@ public class AverageOfElementsInArray {
 			arr[i]=sc.nextInt();
 		}
 		int sum=0;
-		double avg=0;
+		int avg=0;
 		for(int i:arr)
 		{
 			sum+=i;
