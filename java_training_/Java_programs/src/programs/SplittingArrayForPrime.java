@@ -4,6 +4,18 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class SplittingArrayForPrime {
+	
+
+	public static boolean isPrime(int n)
+	{
+		int count=0;
+		for (int i=1;i<=n;i++)
+		{
+			if(n%i==0)
+				count++;
+		}
+		return count==2;
+	}
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
@@ -16,26 +28,35 @@ public class SplittingArrayForPrime {
 			arr[i]=sc.nextInt();
 		}
 		System.out.println(Arrays.toString(arr));
-		int count=0;
-		for(int i:arr) {
-			if(i%2==0) {
-				count++;
-			}
-			if(count==2)
-				
-				System.out.println((arr[i]));
+		int countP=0,countNp=0;
+		for(int i:arr)
+		{
+			if(isPrime(i))
+				countP++;
 			else
-				System.out.println("no prime number");
-//				even[evenI]=arr[i];
-//				evenI++;
-//			}
-			
-			
+				countNp++;
 		}
+		int primes[]=new int[countP];
+		int Nonprimes[]=new int[countNp];
+		int primeI=0,nonPrimeI=0;
+		for(int i=0;i<=arr.length-1;i++)
+		{
+			
+			if(primeI==2) {
+				primes[primeI]=arr[i];
+				primeI++;
+			}
 		
-//		System.out.println(Arrays.toString(odd));
-		
+		else
+		{
+			Nonprimes[nonPrimeI]=arr[i];
+			nonPrimeI++;
+		}
+		}
+	
+	System.out.println(Arrays.toString(primes));
+	System.out.println(Arrays.toString(Nonprimes));
 
-	}
+}
 }
 
