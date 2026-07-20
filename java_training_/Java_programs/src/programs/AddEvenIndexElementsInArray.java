@@ -26,9 +26,7 @@ public class AddEvenIndexElementsInArray {
 		System.out.println("Array:"+Arrays.toString(arr));
 		System.out.println("Sum of elemnets in even Index:"+sum);
 		
-		{
-			
-		}
+		
 
 	}
 
